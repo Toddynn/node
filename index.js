@@ -12,9 +12,13 @@ const ask = (index = 0) =>{
 
 ask();
 
-
+const respostas = [];
 process.stdin.on("data", data =>{
-    process.stdout.write(data.toString().trim() + "\n");
-    process.exit();
+    respostas.push(data.toString().trim());
+    if(respostas.length < perguntas.length){
+        ask(respostas.length);
+    }else{
+        console.log("respostas: \n" + respostas);
+        process.exit();
+    }
 });    
-

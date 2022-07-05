@@ -1,3 +1,3 @@
-const meuModulo = require("./desafio1.js");
+const nomer = require("./desafio1.js");
 
-console.log(meuModulo);
+console.log(nomer);
